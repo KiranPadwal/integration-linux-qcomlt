@@ -696,6 +696,13 @@
 				bias-pull-down;
 			};
 
+			pm8921_otg_mvs: pm8921-otg-mvs {
+				compatible	= "qcom,rpm-pm8921-switch";
+				reg		= <QCOM_RPM_USB_OTG_SWITCH>;
+				regulator-always-on;
+				regulator-boot-on;
+				bias-pull-down;
+			};
 		};
 
 		/* PCIE */
