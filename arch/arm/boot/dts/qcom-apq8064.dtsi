@@ -597,6 +597,22 @@
 						};
 					};
 				};
+
+				pmic8921_adc: adc@17e {
+					compatible = "qcom,pm8921-adc";
+					reg = <0x17e>;
+					interrupt-parent = <&pmicintc>;
+					interrupts = <78 1>;
+					interrupt-names = "pm8921_adc_eoc_usr_irq", "";
+				};
+
+				pmic8921_tm: tm@0 {
+					compatible = "qcom,pm8921-tm";
+					reg = <0x0>;
+					interrupt-parent = <&pmicintc>;
+					interrupts = <52 1>, <55 1>;
+					interrupt-names = "pm8921_overtemp_irq", "pm8921_tempstat_irq";
+				};
 			};
 		};
 
